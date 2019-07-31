@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<form method="post">
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="firstNumber">First number</label>
+                <input type="number" asp-for="firstNumber" id="firstNumber" class="form-control" />
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label for="secondNumber">Second number</label>
+                <input type="number" asp-for="secondNumber" id="secondNumber" class="form-control" />
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn-dark"/>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label for="total">Total</label>
+                <p>@Html.Raw(Model.Total.ToString())</p>
+            </div>
+        </div>
+    </div>
+</form>
